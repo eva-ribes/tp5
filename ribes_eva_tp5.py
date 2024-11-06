@@ -1,4 +1,5 @@
-from math import atan2
+from math import atan2, sqrt
+
 
 
 
@@ -44,6 +45,10 @@ class Point:
         
 
 
+    def distance_point(self, p):
+        return sqrt((self.x - p.x)**2 + (self.y - p.y)**2)
+
+
  
 p = Point(1, 2)
 Point(p)
@@ -60,5 +65,9 @@ d = Point(2, 3)
 
 
 #print(p.angle(d))   #0.7853981633974483
+#print(p.angle(p))    #0.0
+
+#print(p.distance_point(d))  #1.4142135623730951
+#print(p.distance_point(p))  #0.0
 
 

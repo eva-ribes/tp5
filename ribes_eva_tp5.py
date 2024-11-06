@@ -1,3 +1,8 @@
+from math import atan2
+
+
+
+
 class Point:
     def __init__(self, *args):
         if len(args) == 0:
@@ -34,6 +39,11 @@ class Point:
 
 
 
+    def angle(self, p):
+        return atan2(p.y - self.y, p.x - self.x)
+        
+
+
  
 p = Point(1, 2)
 Point(p)
@@ -48,5 +58,7 @@ d = Point(2, 3)
 #print(p.egaux(p))   #True
 #print(p.egaux(d))   #False
 
+
+#print(p.angle(d))   #0.7853981633974483
 
 

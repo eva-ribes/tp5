@@ -29,17 +29,24 @@ class Point:
 
 
 
+    def egaux(self, p):
+        return (self.x == p.x) and (self.y == p.y)
 
 
 
  
-p = Point(1,2)
+p = Point(1, 2)
 Point(p)
+
+d = Point(2, 3)
 
 #print(p.__getitem__(10))  #<class 'IndexError'>
 #print(p.__getitem__(1))   #2
 
-print(p.__str__())
+#print(p.__str__())   #(1, 2)
+
+#print(p.egaux(p))   #True
+#print(p.egaux(d))   #False
 
 
 
